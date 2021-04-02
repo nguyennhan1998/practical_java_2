@@ -55,12 +55,12 @@ public class ProductController {
         return "redirect:/product/list";
     }
 
-        @RequestMapping(value = "/product/edit",method = RequestMethod.GET)
-        public String editProduct(@RequestParam("id") int id,Model model){
-            Optional<Product> productEdit = productModel.findById(id);
-            productEdit.ifPresent(product -> model.addAttribute("product",product));
-            return "product-form-edit";
-        }
+    @RequestMapping(value = "/product/edit",method = RequestMethod.GET)
+    public String editProduct(@RequestParam("id") int id,Model model){
+        Optional<Product> productEdit = productModel.findById(id);
+        productEdit.ifPresent(product -> model.addAttribute("product",product));
+        return "product-form-edit";
+    }
 
     @RequestMapping(path = "/product/delete/{id}", method = RequestMethod.POST)
     public String deleteProduct(@PathVariable int id) {

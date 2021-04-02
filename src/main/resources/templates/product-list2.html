@@ -6,20 +6,20 @@
     <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
 </head>
 <body>
-    <table class="table table-striped">
-        <tr>
-            <td>Name</td>
-            <td>ImgUrl</td>
-            <td>Price</td>
-            <td>Date</td>
-        </tr>
-        <tr th:each="product : ${list}">
-            <td th:text="${product.name}"></td>
-            <td th:text="${product.imgUrl}"></td>
-            <td th:text="${product.price}"></td>
-            <td th:text="${product.createdTime}"></td>
-        </tr>
-        </tbody>
-    </table>
+<table class="table table-striped">
+    <tr>
+        <td>Name</td>
+        <td>ImgUrl</td>
+        <td>Price</td>
+        <td>Date</td>
+    </tr>
+    <tr th:each="product : ${list}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.imgUrl}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.createdTime}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
-</html>
+</html>r
